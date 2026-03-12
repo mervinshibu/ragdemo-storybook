@@ -21,6 +21,7 @@ Example structure:
   "title": "The Frog-King, or Iron Henry",
   "text": "In olden times when wishing still helped one..."
 }
+```
 
 ## Setup
 
@@ -29,16 +30,19 @@ Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate
+```
 
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Data Extraction
 To extract stories from the HTML source:
 
 ```bash
 python scripts/extract_stories.py
+```
 
 This generates `data/stories.json` which will later be used as the knowledge base for the RAG system.
