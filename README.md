@@ -38,6 +38,14 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+## Configuration
+
+Create a `.env` file with your OpenAI API key:
+
+```bash
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
+```
+
 ## Data Extraction
 To extract stories from the HTML source:
 
@@ -46,3 +54,23 @@ python scripts/extract_stories.py
 ```
 
 This generates `data/stories.json` which will later be used as the knowledge base for the RAG system.
+
+## Running the Pipeline
+
+After extracting the data, follow these steps to use the RAG system:
+
+1. **Generate Embeddings**
+   ```bash
+   python src/embeddings.py
+   ```
+   This reads `data/stories.json`, generates embeddings using the OpenAI API, and saves them to `data/story-vectors.json`.
+
+2. **Initialize ChromaDB**
+   ```bash
+   python src/init_chroma.py
+   ```
+
+3. **Run Console Q&A**
+   ```bash
+   python src/console_rag_QnA.py
+   ```
