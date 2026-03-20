@@ -18,8 +18,8 @@ Example structure:
 ```json
 {
   "story_id": 1,
-  "title": "The Frog-King, or Iron Henry",
-  "text": "In olden times when wishing still helped one..."
+  "title": "THE GOLDEN BIRD",
+  "text": "A certain king had a beautiful garden, and in the garden..."
 }
 ```
 
