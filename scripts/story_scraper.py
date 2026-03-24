@@ -3,8 +3,9 @@ import json
 import re
 from pathlib import Path
 
-html_path = Path("../data/grimm-fairy-tales.html")
-output_path = Path("../data/stories.json")
+base_dir = Path(__file__).resolve().parent.parent
+html_path = base_dir / "data" / "grimm-fairy-tales.html"
+output_path = base_dir / "data" / "stories.json"
 
 with html_path.open("r", encoding="utf-8") as f:
     soup = BeautifulSoup(f, "html.parser")

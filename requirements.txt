@@ -2,3 +2,9 @@ beautifulsoup4
 openai
 python-dotenv
 chromadb
+ragas
+langchain-core
+langchain-openai
+langchain-community
+pandas
+eval_type_backport

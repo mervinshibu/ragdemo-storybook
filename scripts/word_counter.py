@@ -2,13 +2,9 @@ import json
 import os
 
 def main():
-    # Get the directory of the current script to find stories.json reliably
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(script_dir, '..', 'data', 'stories.json')
-    
-    # Fallback to current working directory if script_dir logic fails
-    if not os.path.exists(json_path):
-        json_path = 'data/stories.json'
+    # Get the base directory reliably (storybook-rag)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    json_path = os.path.join(base_dir, 'data', 'stories.json')
         
     with open(json_path, 'r', encoding='utf-8') as file:
         stories = json.load(file)
