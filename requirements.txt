@@ -8,3 +8,4 @@ langchain-openai
 langchain-community
 pandas
 eval_type_backport
+datasets
